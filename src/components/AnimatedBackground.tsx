@@ -25,7 +25,6 @@ export function AnimatedBackground() {
   return (
     <Particles
       id="tsparticles"
-      particlesLoaded={particlesLoaded}
       options={{
         background: {
           color: {
