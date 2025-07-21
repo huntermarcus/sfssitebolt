@@ -177,12 +177,13 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
+              data-aos="fade-up"
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-primary-blue mb-4">A. GENERAL INFORMATION</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
@@ -217,6 +218,7 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
+              data-aos="fade-up"
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-primary-blue mb-4">B. DOCUMENTS / INFORMATION</h2>
@@ -230,6 +232,8 @@ export function CBSEDisclosure() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 shadow-lg"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
                   >
                     <div className="flex items-center justify-between">
                         <h3 className="text-xl font-bold text-primary-blue mb-4 flex items-center space-x-2">
@@ -257,6 +261,7 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
+              data-aos="fade-up"
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-primary-blue mb-4">C. RESULT AND ACADEMICS</h2>
@@ -264,14 +269,14 @@ export function CBSEDisclosure() {
 
               <div className="space-y-8">
                 {/* Academic Documents */}
-                 <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                 <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
                         <FileText className="h-6 w-6 text-secondary-red" />
                         <span>Documents</span>
                     </h3>
                     <div className="space-y-4">
                         {academicDocs.map((doc, index) => (
-                            <div key={index} className="flex items-center justify-between bg-light-gray p-4 rounded-lg">
+                            <div key={index} className="flex items-center justify-between bg-light-gray p-4 rounded-lg" data-aos="fade-left" data-aos-delay={index * 100}>
                                 <span className="font-medium text-gray-800">{doc.name}</span>
                                 <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-blue rounded-lg hover:bg-secondary-blue transition-colors duration-300">
                                     <Eye className="h-4 w-4 text-white" />
@@ -282,7 +287,7 @@ export function CBSEDisclosure() {
                 </div>
 
                 {/* Class X Results */}
-                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="400">
                   <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
                     <Award className="h-6 w-6 text-secondary-red" />
                     <span>RESULT - CLASS X</span>
@@ -323,7 +328,7 @@ export function CBSEDisclosure() {
                 </div>
 
                 {/* Class XII Results */}
-                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="600">
                   <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
                     <Award className="h-6 w-6 text-secondary-red" />
                     <span>RESULT - CLASS XII</span>
@@ -372,12 +377,13 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
+              data-aos="fade-up"
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-primary-blue mb-4">D. STAFF DETAILS</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
@@ -412,12 +418,13 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
+              data-aos="fade-up"
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-primary-blue mb-4">E. INFRASTRUCTURE</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-gradient-to-r from-primary-red to-secondary-red">
@@ -448,29 +455,6 @@ export function CBSEDisclosure() {
         </div>
       </section>
 
-      {/* Compliance Statement */}
-      <section className="py-20 bg-light-gray">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-primary-blue to-primary-red rounded-3xl p-8 text-white shadow-2xl"
-          >
-            <CheckCircle className="h-16 w-16 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-4">CBSE Compliance Statement</h2>
-            <p className="text-lg mb-6 opacity-90">
-              This school is fully compliant with all CBSE regulations and guidelines.
-              All mandatory disclosures are updated regularly and made available for public viewing.
-            </p>
-            <div className="bg-white/20 rounded-xl p-4">
-              <p className="text-sm font-medium">
-                Last Updated: July 2024
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }

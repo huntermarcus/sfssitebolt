@@ -1,49 +1,91 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine";
 
 export function AnimatedBackground() {
-  const particles = Array.from({ length: 15 }, (_, i) => i);
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {particles.map((particle) => (
-        <motion.div
-          key={particle}
-          className="absolute w-2 h-2 bg-blue-400/20 rounded-full"
-          initial={{
-            x: Math.random() * window.innerWidth,
-            y: window.innerHeight + 50,
-          }}
-          animate={{
-            y: -50,
-            x: Math.random() * window.innerWidth,
-          }}
-          transition={{
-            duration: Math.random() * 10 + 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-      ))}
-      
-      {/* Floating geometric shapes */}
-      <motion.div
-        className="absolute top-20 left-10 w-16 h-16 border-2 border-blue-400/30 rounded-lg"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
-      
-      <motion.div
-        className="absolute top-40 right-20 w-8 h-8 bg-blue-400/20 rounded-full"
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
-      
-      <motion.div
-        className="absolute bottom-32 left-1/4 w-12 h-12 border-2 border-blue-400/30 rounded-full"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-    </div>
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      options={{
+        background: {
+          color: {
+            value: "#ffffff",
+          },
+        },
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            resize: true,
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4,
+            },
+          },
+        },
+        particles: {
+          color: {
+            value: ["#B80000", "#00008B", "#FF5733", "#4169E1"],
+          },
+          links: {
+            color: "#cccccc",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 2,
+            straight: false,
+          },
+          number: {
+            density: {
+              enable: true,
+              area: 800,
+            },
+            value: 80,
+          },
+          opacity: {
+            value: 0.5,
+          },
+          shape: {
+            type: "char",
+            options: {
+              char: {
+                value: ["🎓", "📚", "🔬", "💡", "✏️"],
+                font: "Verdana",
+                style: "",
+                weight: "400",
+                fill: true
+              },
+            },
+          },
+          size: {
+            value: { min: 16, max: 32 },
+          },
+        },
+        detectRetina: true,
+      }}
+    />
   );
 }

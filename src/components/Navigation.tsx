@@ -34,7 +34,7 @@ export function Navigation() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/15 backdrop-blur-md border-b border-white/30'
+          ? 'bg-white shadow-md'
           : 'bg-transparent'
       }`}
     >
@@ -42,12 +42,12 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg group-hover:scale-110 transition-transform duration-300">
+            <div className={`p-2 bg-gradient-to-r from-primary-blue to-secondary-blue rounded-lg group-hover:scale-110 transition-transform duration-300`}>
               <GraduationCap className="h-8 w-8 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white">SFS CBSE School</h1>
-              <p className="text-xs text-blue-200">Excellence in Education</p>
+              <h1 className={`text-xl font-bold ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>SFS CBSE School</h1>
+              <p className={`text-xs ${isScrolled ? 'text-secondary-blue' : 'text-blue-200'}`}>Excellence in Education</p>
             </div>
           </Link>
 
@@ -59,15 +59,15 @@ export function Navigation() {
                 to={item.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group ${
                   location.pathname === item.path
-                    ? 'text-blue-200 bg-white/20'
-                    : 'text-white hover:text-blue-200 hover:bg-white/10'
+                    ? `text-white bg-primary-red`
+                    : `${isScrolled ? 'text-primary-blue' : 'text-white'} hover:text-white hover:bg-secondary-red`
                 }`}
               >
                 {item.label}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-700/20 rounded-lg"
+                    className="absolute inset-0 bg-primary-red rounded-lg"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -79,7 +79,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+            className={`lg:hidden p-2 rounded-lg ${isScrolled ? 'text-primary-blue' : 'text-white'} hover:bg-gray-200 transition-colors duration-300`}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -93,7 +93,7 @@ export function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-white/10 backdrop-blur-md border-b border-white/20"
+            className="lg:hidden bg-white shadow-lg"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
@@ -103,8 +103,8 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                     location.pathname === item.path
-                      ? 'text-blue-200 bg-white/20'
-                      : 'text-white hover:text-blue-200 hover:bg-white/10'
+                      ? 'text-white bg-primary-red'
+                      : 'text-primary-blue hover:text-white hover:bg-secondary-red'
                   }`}
                 >
                   {item.label}
