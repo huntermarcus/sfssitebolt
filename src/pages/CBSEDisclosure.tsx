@@ -8,7 +8,6 @@ import {
   Users, 
   Building, 
   Award,
-  ChevronDown,
   CheckCircle
 } from 'lucide-react';
 
@@ -24,128 +23,105 @@ export function CBSEDisclosure() {
   ];
 
   const generalInfo = [
-    { field: "School Name", value: "SFS CBSE School" },
-    { field: "Affiliation Number", value: "1234567" },
-    { field: "School Code", value: "12345" },
-    { field: "Complete Address", value: "123 Education Street, Academic City, State - 123456" },
-    { field: "Principal Name", value: "Dr. Sarah Johnson" },
-    { field: "Principal Qualification", value: "Ph.D. in Education, M.Ed., B.Ed." },
-    { field: "School Email ID", value: "sfscbsetry@gmail.com" },
-    { field: "Contact Details", value: "+91 98765 43210" },
-    { field: "Year of Establishment", value: "1999" },
-    { field: "Website", value: "www.sfscbse.edu.in" },
-    { field: "Working Days", value: "Monday to Saturday" },
-    { field: "Academic Session", value: "April to March" },
-    { field: "Admission Period", value: "January to March" },
-    { field: "Mode of Payment", value: "Online/Offline" },
-    { field: "Fee Structure", value: "Available on School Website" }
+    { field: "NAME OF THE SCHOOL", value: "MONTFORT SCHOOL" },
+    { field: "STATE GOVERNMENT NOC No.", value: "48272/W28/2006 Dated 16-06-2006" },
+    { field: "STATE RECOGNITION No.", value: "004-23-S-002600125 Valid Upto 10-01-2025" },
+    { field: "CBSE AFFILIATION NO.", value: "1930205" },
+    { field: "SCHOOL CODE", value: "55145" },
+    { field: "CBSE AFFILIATION PERIOD", value: "01-04-2022 to 31-03-2027" },
+    { field: "CATEGORY", value: "Senior Secondary School" },
+    { field: "NAME OF THE PRINCIPAL", value: "BRO. ROBERT LOURDUSAMY" },
+    { field: "QUALIFICATION", value: "M.A., B.ED" },
+    { field: "SCHOOL EMAIL ID", value: "montfortsg@gmail.com" },
+    { field: "SCHOOL WEBSITE", value: "www.montforttrichy.com" },
+    { field: "COMPLETE ADDRESS WITH PIN CODE", value: "Balaji Nagar, Kattur, Trichy – 620 019" },
+    { field: "CONTACT DETAILS ( LANDLINE / MOBILE )", value: "+91 – 431 – 2534047, 2534049" }
   ];
 
   const documents = [
-    {
-      category: "Trust/Society/Company Registration",
-      files: [
-        { name: "Trust Registration Certificate", type: "PDF", size: "2.1 MB" },
-        { name: "Society Registration Document", type: "PDF", size: "1.8 MB" }
-      ]
-    },
-    {
-      category: "No Objection Certificate (NOC)",
-      files: [
-        { name: "State Government NOC", type: "PDF", size: "1.5 MB" },
-        { name: "Fire Safety Certificate", type: "PDF", size: "2.3 MB" }
-      ]
-    },
-    {
-      category: "Recognition Certificate",
-      files: [
-        { name: "CBSE Recognition Certificate", type: "PDF", size: "3.2 MB" },
-        { name: "State Board Recognition", type: "PDF", size: "2.7 MB" }
-      ]
-    },
-    {
-      category: "Building Safety Certificate",
-      files: [
-        { name: "Building Safety Certificate", type: "PDF", size: "2.9 MB" },
-        { name: "Structural Safety Report", type: "PDF", size: "4.1 MB" }
-      ]
-    },
-    {
-      category: "Water, Health and Sanitation Certificates",
-      files: [
-        { name: "Water Quality Certificate", type: "PDF", size: "1.2 MB" },
-        { name: "Health & Sanitation Certificate", type: "PDF", size: "1.7 MB" }
-      ]
-    },
-    {
-      category: "Academic Session Information",
-      files: [
-        { name: "Academic Calendar 2024-25", type: "PDF", size: "1.9 MB" },
-        { name: "Fee Structure 2024-25", type: "PDF", size: "1.3 MB" }
-      ]
-    }
+    { name: "AFFILIATION / UPGRADATION LETTER AND RECENT EXTENSION OF AFFILIATION", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Affiliation-2027s.pdf" },
+    { name: "SOCIETIES / TRUST / COMPANY REGISTRATION / RENEWAL CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SOCEITY REGISTRATION CERTIFICATE.pdf" },
+    { name: "NO OBJECTION CERTIFICATE (NOC) ISSUED, BY THIS STATE GOVT.", link: "https://montforttrichy.com/wp-content/uploads/2023/06/NOC.pdf" },
+    { name: "RECOGNITION CERTIFICATE UNDER RTE ACT, 2009", link: "https://montforttrichy.com/wp-content/uploads/2023/06/RECOGNITION_CERTIFICATES.pdf" },
+    { name: "BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/BUILDING_SAFETY_CERTIFICATE.pdf" },
+    { name: "FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Fire-Safety-Certificates.pdf" },
+    { name: "THE DEO CERTIFICATE / SELF CERTIFICATION PROFORMA", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SELF_CERTIFICATION_PROFORMA.pdf" },
+    { name: "HEALTH AND SANITATION CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/WATERHEALTH_CERTIFICATE_2024.pdf" },
+    { name: "WATER SAMPLE TEST REPORT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/WATERREPORTS.pdf" },
+    { name: "LAND CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Landcertificate.pdf" },
+    { name: "SCHOOL AFFIDAVIT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SCHOOLAFFIDAVIT.pdf" },
   ];
 
-  const academicResults = [
-    {
-      year: "2023-24",
-      classX: { appeared: 120, passed: 118, percentage: "98.33%" },
-      classXII: { appeared: 95, passed: 94, percentage: "98.95%" }
-    },
-    {
-      year: "2022-23", 
-      classX: { appeared: 115, passed: 113, percentage: "98.26%" },
-      classXII: { appeared: 89, passed: 88, percentage: "98.88%" }
-    },
-    {
-      year: "2021-22",
-      classX: { appeared: 108, passed: 106, percentage: "98.15%" },
-      classXII: { appeared: 82, passed: 81, percentage: "98.78%" }
-    }
+  const academicDocs = [
+    { name: "FEE STRUCTURE OF THE SCHOOL", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Fee-Structure 2024-2025.pdf" },
+    { name: "ANNUAL ACADEMIC CALENDAR", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Academic Calender 2024-25.pdf" },
+    { name: "LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SMCC.pdf" },
+    { name: "LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS", link: "https://montforttrichy.com/wp-content/uploads/2023/06/PTA.pdf" },
+    { name: "LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABLITY", link: "https://montforttrichy.com/wp-content/uploads/2023/06/X & XII Results_Montfort School.pdf" },
+    { name: "DECLARATION OF BOOKS CONTENT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Books.pdf" },
+    { name: "STAFF DETAILS", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Teaching-staff.pdf" },
+    { name: "STUDENTS STRENGTH", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Students_Strength_2223.pdf" },
   ];
 
-  const staffInfo = [
-    { category: "Principal", count: 1, qualification: "Ph.D./M.Ed." },
-    { category: "Vice Principal", count: 2, qualification: "M.Ed./M.A." },
-    { category: "PGT (Post Graduate Teachers)", count: 25, qualification: "Post Graduate + B.Ed." },
-    { category: "TGT (Trained Graduate Teachers)", count: 35, qualification: "Graduate + B.Ed." },
-    { category: "PRT (Primary Teachers)", count: 40, qualification: "Graduate + D.Ed./B.Ed." },
-    { category: "Physical Education Teacher", count: 4, qualification: "B.P.Ed./M.P.Ed." },
-    { category: "Art Teacher", count: 3, qualification: "BFA/MFA" },
-    { category: "Music Teacher", count: 2, qualification: "Diploma/Degree in Music" },
-    { category: "Librarian", count: 2, qualification: "B.Lib./M.Lib." },
-    { category: "Computer Instructor", count: 5, qualification: "BCA/MCA/B.Tech" },
-    { category: "Counselor", count: 2, qualification: "M.A. Psychology" },
-    { category: "Administrative Staff", count: 15, qualification: "Graduate" },
-    { category: "Support Staff", count: 20, qualification: "Various" }
+  const resultsX = [
+    { year: 2018, registered: 320, passed: 320, percentage: 100 },
+    { year: 2019, registered: 307, passed: 307, percentage: 100 },
+    { year: 2020, registered: 311, passed: 311, percentage: 100 },
+    { year: 2021, registered: 307, passed: 307, percentage: 100 },
+    { year: 2022, registered: 302, passed: 302, percentage: 100 },
   ];
 
-  const infrastructure = [
-    { facility: "Total Campus Area", details: "10 Acres", capacity: "Full Campus" },
-    { facility: "Built-up Area", details: "5,00,000 sq ft", capacity: "Academic & Administrative" },
-    { facility: "Number of Classrooms", details: "85", capacity: "40 students each" },
-    { facility: "Laboratories", details: "12", capacity: "Physics, Chemistry, Biology, Computer" },
-    { facility: "Library", details: "1", capacity: "25,000 books, 200 seating" },
-    { facility: "Auditorium", details: "1", capacity: "500 seating" },
-    { facility: "Playground", details: "5", capacity: "Various sports" },
-    { facility: "Computer Labs", details: "5", capacity: "40 computers each" },
-    { facility: "Language Lab", details: "2", capacity: "40 students each" },
-    { facility: "Medical Room", details: "1", capacity: "First Aid & Health Check" },
-    { facility: "Cafeteria", details: "1", capacity: "300 students" },
-    { facility: "Transportation", details: "25 buses", capacity: "School routes coverage" },
-    { facility: "Swimming Pool", details: "1", capacity: "Olympic size" },
-    { facility: "Gymnasium", details: "1", capacity: "Indoor sports" }
+  const resultsXII = [
+    { year: 2018, registered: 61, passed: 61, percentage: 100 },
+    { year: 2019, registered: 107, passed: 107, percentage: 100 },
+    { year: 2020, registered: 111, passed: 111, percentage: 100 },
+    { year: 2021, registered: 120, passed: 120, percentage: 100 },
+    { year: 2022, registered: 103, passed: 103, percentage: 100 },
+  ];
+
+  const staffDetails = [
+    { category: "PRINCIPAL", details: 1 },
+    { category: "VICE PRINCIPAL", details: 1 },
+    { category: "PGT", details: 9 },
+    { category: "TGT", details: 52 },
+    { category: "PRT", details: 53 },
+    { category: "NTT", details: 22 },
+    { category: "PET", details: 8 },
+    { category: "LIBRARIAN", details: 2 },
+    { category: "ART TEACHERS", details: 4 },
+    { category: "SPECIAL EDUCATOR", details: 1 },
+    { category: "COUNSELLOR", details: 1 },
+    { category: "NURSE", details: 2 },
+  ];
+
+  const infrastructureDetails = [
+    { facility: "TOTAL LAND AREA", details: "31888 Sq. Mt." },
+    { facility: "PLAYGROUND AREA", details: "146809 Sq. Ft." },
+    { facility: "NO. OF CLASS ROOMS", details: "104 (52 Sq. Ft.)" },
+    { facility: "NO. OF DIGITAL CLASS ROOMS", details: "93" },
+    { facility: "LIBRARY", details: "02 (AREA 175 Sq. Mt.)" },
+    { facility: "NO. OF BOOKS IN THE LIBRARY", details: "18000" },
+    { facility: "COMPUTER LAB", details: "04 (AREA 178 Sq. Mt.)" },
+    { facility: "COMPOSITE LAB", details: "01 (AREA 57 Sq. Mt.)" },
+    { facility: "PHYSICS LAB", details: "01 (AREA 178 Sq. Mt.)" },
+    { facility: "CHEMISTRY LAB", details: "01 (AREA 178 Sq. Mt.)" },
+    { facility: "MATHS LAB", details: "01 (AREA 100 Sq. Mt.)" },
+    { facility: "BIOLOGY LAB", details: "01 (AREA 93 Sq. Mt.)" },
+    { facility: "TOILETS", details: "BOYS - 42, GIRLS - 42, MALE STAFF - 3, FEMALE STAFF - 14" },
+    { facility: "CWSN TOILETS", details: "BOYS - 6, GIRLS - 6" },
+    { facility: "URINALS WITH PARTITION", details: "BOYS - 48, GIRLS - 48" },
   ];
 
   return (
-    <div className="pt-16 lg:pt-20">
+    <div className="pt-16 lg:pt-20 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+      <section className="relative py-20 overflow-hidden shadow-lg">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/80 to-primary-red/80" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+            backgroundImage: 'url(https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            mixBlendMode: 'overlay'
           }}
         />
         
@@ -165,7 +141,7 @@ export function CBSEDisclosure() {
       </section>
 
       {/* Navigation Tabs */}
-      <section className="py-12 bg-white/5 backdrop-blur-sm">
+      <section className="py-12 bg-light-gray backdrop-blur-sm shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -177,10 +153,10 @@ export function CBSEDisclosure() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-lg ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900'
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                    ? 'bg-gradient-to-r from-primary-red to-secondary-red text-white'
+                    : 'bg-white text-primary-blue hover:bg-gray-100'
                 }`}
               >
                 <tab.icon className="h-5 w-5" />
@@ -203,17 +179,16 @@ export function CBSEDisclosure() {
               className="space-y-8"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">General Information</h2>
-                <p className="text-xl text-gray-200">Basic school details and administrative information</p>
+                <h2 className="text-4xl font-bold text-primary-blue mb-4">A. GENERAL INFORMATION</h2>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-blue-600 to-purple-600">
+                    <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
                       <tr>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Information</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Details</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -223,10 +198,10 @@ export function CBSEDisclosure() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-white font-medium">{info.field}</td>
-                          <td className="px-6 py-4 text-gray-200">{info.value}</td>
+                          <td className="px-6 py-4 text-gray-800 font-medium">{info.field}</td>
+                          <td className="px-6 py-4 text-gray-600">{info.value}</td>
                         </motion.tr>
                       ))}
                     </tbody>
@@ -244,49 +219,31 @@ export function CBSEDisclosure() {
               className="space-y-8"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Important Documents</h2>
-                <p className="text-xl text-gray-200">All mandatory certificates and legal documents</p>
+                <h2 className="text-4xl font-bold text-primary-blue mb-4">B. DOCUMENTS / INFORMATION</h2>
               </div>
 
               <div className="space-y-6">
-                {documents.map((category, index) => (
+                {documents.map((doc, index) => (
                   <motion.div
-                    key={category.category}
+                    key={doc.name}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                    className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 shadow-lg"
                   >
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center space-x-2">
-                      <FileText className="h-6 w-6 text-yellow-400" />
-                      <span>{category.category}</span>
-                    </h3>
-                    
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {category.files.map((file, fileIndex) => (
-                        <div
-                          key={fileIndex}
-                          className="bg-white/5 rounded-lg p-4 flex items-center justify-between hover:bg-white/10 transition-colors duration-300"
-                        >
-                          <div className="flex items-center space-x-3">
-                            <div className="bg-red-500 p-2 rounded-lg">
-                              <FileText className="h-5 w-5 text-white" />
-                            </div>
-                            <div>
-                              <p className="text-white font-medium">{file.name}</p>
-                              <p className="text-gray-300 text-sm">{file.type} • {file.size}</p>
-                            </div>
-                          </div>
-                          <div className="flex space-x-2">
-                            <button className="p-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                              <Eye className="h-4 w-4 text-white" />
-                            </button>
-                            <button className="p-2 bg-green-600 rounded-lg hover:bg-green-700 transition-colors duration-300">
-                              <Download className="h-4 w-4 text-white" />
-                            </button>
-                          </div>
+                    <div className="flex items-center justify-between">
+                        <h3 className="text-xl font-bold text-primary-blue mb-4 flex items-center space-x-2">
+                        <FileText className="h-6 w-6 text-secondary-red" />
+                        <span>{doc.name}</span>
+                        </h3>
+                        <div className="flex space-x-2">
+                            <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-blue rounded-lg hover:bg-secondary-blue transition-colors duration-300">
+                                <Eye className="h-4 w-4 text-white" />
+                            </a>
+                            <a href={doc.link} download className="p-2 bg-primary-red rounded-lg hover:bg-secondary-red transition-colors duration-300">
+                                <Download className="h-4 w-4 text-white" />
+                            </a>
                         </div>
-                      ))}
                     </div>
                   </motion.div>
                 ))}
@@ -302,43 +259,60 @@ export function CBSEDisclosure() {
               className="space-y-8"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Academic Results</h2>
-                <p className="text-xl text-gray-200">Board examination results for the past three years</p>
+                <h2 className="text-4xl font-bold text-primary-blue mb-4">C. RESULT AND ACADEMICS</h2>
               </div>
 
               <div className="space-y-8">
+                {/* Academic Documents */}
+                 <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
+                        <FileText className="h-6 w-6 text-secondary-red" />
+                        <span>Documents</span>
+                    </h3>
+                    <div className="space-y-4">
+                        {academicDocs.map((doc, index) => (
+                            <div key={index} className="flex items-center justify-between bg-light-gray p-4 rounded-lg">
+                                <span className="font-medium text-gray-800">{doc.name}</span>
+                                <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-blue rounded-lg hover:bg-secondary-blue transition-colors duration-300">
+                                    <Eye className="h-4 w-4 text-white" />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Class X Results */}
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
-                    <Award className="h-6 w-6 text-yellow-400" />
-                    <span>Class X Results</span>
+                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                  <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
+                    <Award className="h-6 w-6 text-secondary-red" />
+                    <span>RESULT - CLASS X</span>
                   </h3>
                   
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gradient-to-r from-green-600 to-blue-600">
+                      <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
                         <tr>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Academic Year</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Students Appeared</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Students Passed</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Pass Percentage</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">YEAR</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF REGISTERED STUDENTS</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF STUDENTS PASSED</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">PASS PERCENTAGE</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {academicResults.map((result, index) => (
+                        {resultsX.map((result, index) => (
                           <motion.tr
                             key={result.year}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                            className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
                           >
-                            <td className="px-6 py-4 text-white font-medium">{result.year}</td>
-                            <td className="px-6 py-4 text-gray-200">{result.classX.appeared}</td>
-                            <td className="px-6 py-4 text-gray-200">{result.classX.passed}</td>
+                            <td className="px-6 py-4 text-gray-800 font-medium">{result.year}</td>
+                            <td className="px-6 py-4 text-gray-600">{result.registered}</td>
+                            <td className="px-6 py-4 text-gray-600">{result.passed}</td>
                             <td className="px-6 py-4">
-                              <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-medium">
-                                {result.classX.percentage}
+                              <span className="bg-green-500/20 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                {result.percentage}%
                               </span>
                             </td>
                           </motion.tr>
@@ -349,37 +323,37 @@ export function CBSEDisclosure() {
                 </div>
 
                 {/* Class XII Results */}
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
-                    <Award className="h-6 w-6 text-yellow-400" />
-                    <span>Class XII Results</span>
+                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg">
+                  <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
+                    <Award className="h-6 w-6 text-secondary-red" />
+                    <span>RESULT - CLASS XII</span>
                   </h3>
                   
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gradient-to-r from-purple-600 to-pink-600">
+                      <thead className="bg-gradient-to-r from-primary-red to-secondary-red">
                         <tr>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Academic Year</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Students Appeared</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Students Passed</th>
-                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">Pass Percentage</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">YEAR</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF REGISTERED STUDENTS</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF STUDENTS PASSED</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-white">PASS PERCENTAGE</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {academicResults.map((result, index) => (
+                        {resultsXII.map((result, index) => (
                           <motion.tr
                             key={result.year}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                            className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
                           >
-                            <td className="px-6 py-4 text-white font-medium">{result.year}</td>
-                            <td className="px-6 py-4 text-gray-200">{result.classXII.appeared}</td>
-                            <td className="px-6 py-4 text-gray-200">{result.classXII.passed}</td>
+                            <td className="px-6 py-4 text-gray-800 font-medium">{result.year}</td>
+                            <td className="px-6 py-4 text-gray-600">{result.registered}</td>
+                            <td className="px-6 py-4 text-gray-600">{result.passed}</td>
                             <td className="px-6 py-4">
-                              <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
-                                {result.classXII.percentage}
+                              <span className="bg-green-500/20 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                {result.percentage}%
                               </span>
                             </td>
                           </motion.tr>
@@ -400,56 +374,33 @@ export function CBSEDisclosure() {
               className="space-y-8"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Staff Information</h2>
-                <p className="text-xl text-gray-200">Complete details of teaching and non-teaching staff</p>
+                <h2 className="text-4xl font-bold text-primary-blue mb-4">D. STAFF DETAILS</h2>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-orange-600 to-red-600">
+                    <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
                       <tr>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Staff Category</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Number</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Qualification Required</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {staffInfo.map((staff, index) => (
+                      {staffDetails.map((staff, index) => (
                         <motion.tr
                           key={staff.category}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-white font-medium">{staff.category}</td>
-                          <td className="px-6 py-4">
-                            <span className="bg-yellow-400/20 text-yellow-300 px-3 py-1 rounded-full text-sm font-medium">
-                              {staff.count}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-gray-200">{staff.qualification}</td>
+                          <td className="px-6 py-4 text-gray-800 font-medium">{staff.category}</td>
+                          <td className="px-6 py-4 text-gray-600">{staff.details}</td>
                         </motion.tr>
                       ))}
                     </tbody>
                   </table>
-                </div>
-              </div>
-
-              {/* Summary */}
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-yellow-300 mb-2">156</div>
-                  <div className="text-white font-medium">Total Staff</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-green-300 mb-2">119</div>
-                  <div className="text-white font-medium">Teaching Staff</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-blue-300 mb-2">37</div>
-                  <div className="text-white font-medium">Support Staff</div>
                 </div>
               </div>
             </motion.div>
@@ -463,32 +414,29 @@ export function CBSEDisclosure() {
               className="space-y-8"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Details</h2>
-                <p className="text-xl text-gray-200">Complete information about school facilities and infrastructure</p>
+                <h2 className="text-4xl font-bold text-primary-blue mb-4">E. INFRASTRUCTURE</h2>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-teal-600 to-cyan-600">
+                    <thead className="bg-gradient-to-r from-primary-red to-secondary-red">
                       <tr>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Facility</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Details</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">Capacity/Usage</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {infrastructure.map((item, index) => (
+                      {infrastructureDetails.map((item, index) => (
                         <motion.tr
                           key={item.facility}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.03 }}
-                          className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-white font-medium">{item.facility}</td>
-                          <td className="px-6 py-4 text-gray-200">{item.details}</td>
-                          <td className="px-6 py-4 text-gray-200">{item.capacity}</td>
+                          <td className="px-6 py-4 text-gray-800 font-medium">{item.facility}</td>
+                          <td className="px-6 py-4 text-gray-600">{item.details}</td>
                         </motion.tr>
                       ))}
                     </tbody>
@@ -501,23 +449,23 @@ export function CBSEDisclosure() {
       </section>
 
       {/* Compliance Statement */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-light-gray">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-green-500 to-blue-600 rounded-3xl p-8 text-white"
+            className="bg-gradient-to-r from-primary-blue to-primary-red rounded-3xl p-8 text-white shadow-2xl"
           >
             <CheckCircle className="h-16 w-16 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">CBSE Compliance Statement</h2>
             <p className="text-lg mb-6 opacity-90">
-              SFS CBSE School is fully compliant with all CBSE regulations and guidelines. 
+              This school is fully compliant with all CBSE regulations and guidelines.
               All mandatory disclosures are updated regularly and made available for public viewing.
             </p>
             <div className="bg-white/20 rounded-xl p-4">
               <p className="text-sm font-medium">
-                Last Updated: January 2025 | Next Review: April 2025
+                Last Updated: July 2024
               </p>
             </div>
           </motion.div>
