@@ -22,17 +22,17 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative z-10 bg-blue-950/90 backdrop-blur-sm border-t border-white/10">
+    <footer className="relative z-10 bg-primary-blue/90 backdrop-blur-sm border-t border-light-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* School Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
-                <GraduationCap className="h-8 w-8 text-white" />
+              <div className="p-2 bg-gradient-to-r from-primary-red to-red-500 rounded-lg">
+                <GraduationCap className="h-8 w-8 text-light-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">SFS CBSE School</h3>
+                <h3 className="text-xl font-bold text-light-white">SFS CBSE School</h3>
                 <p className="text-blue-200 text-sm">Excellence in Education</p>
               </div>
             </div>
@@ -41,24 +41,24 @@ export function Footer() {
               through innovative teaching methods and comprehensive development programs.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-blue-700 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                <Facebook className="h-5 w-5 text-white" />
+              <a href="#" className="p-2 bg-primary-red rounded-lg hover:bg-red-500 transition-colors duration-300">
+                <Facebook className="h-5 w-5 text-light-white" />
               </a>
-              <a href="#" className="p-2 bg-blue-700 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                <Twitter className="h-5 w-5 text-white" />
+              <a href="#" className="p-2 bg-primary-red rounded-lg hover:bg-red-500 transition-colors duration-300">
+                <Twitter className="h-5 w-5 text-light-white" />
               </a>
-              <a href="#" className="p-2 bg-blue-700 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                <Instagram className="h-5 w-5 text-white" />
+              <a href="#" className="p-2 bg-primary-red rounded-lg hover:bg-red-500 transition-colors duration-300">
+                <Instagram className="h-5 w-5 text-light-white" />
               </a>
-              <a href="#" className="p-2 bg-blue-700 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                <Youtube className="h-5 w-5 text-white" />
+              <a href="#" className="p-2 bg-primary-red rounded-lg hover:bg-red-500 transition-colors duration-300">
+                <Youtube className="h-5 w-5 text-light-white" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-light-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -75,7 +75,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold text-light-white mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-300 mt-0.5 flex-shrink-0" />
@@ -98,7 +98,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-6 text-center">
+        <div className="border-t border-light-white/10 mt-8 pt-6 text-center">
           <p className="text-gray-400 text-sm">
             © 2025 SFS CBSE School. All rights reserved. | Designed with excellence in mind.
           </p>

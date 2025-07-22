@@ -29,7 +29,7 @@ export function AnimatedBackground() {
       options={{
         background: {
           color: {
-            value: "#ffffff",
+            value: "transparent",
           },
         },
         fpsLimit: 60,
@@ -52,10 +52,10 @@ export function AnimatedBackground() {
         },
         particles: {
           color: {
-            value: ["#B80000", "#00008B", "#FF5733", "#4169E1"],
+            value: ["#c00", "#00008B", "#f8f8f8"],
           },
           links: {
-            color: "#cccccc",
+            color: "#f8f8f8",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -84,19 +84,10 @@ export function AnimatedBackground() {
             value: 0.5,
           },
           shape: {
-            type: "char",
-            options: {
-              char: {
-                value: ["🎓", "📚", "🔬", "💡", "✏️"],
-                font: "Verdana",
-                style: "",
-                weight: "400",
-                fill: true
-              },
-            },
+            type: "circle",
           },
           size: {
-            value: { min: 16, max: 32 },
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,

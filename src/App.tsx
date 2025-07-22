@@ -17,7 +17,7 @@ import { CBSEDisclosure } from './pages/CBSEDisclosure';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-red-800 via-red-700 to-red-800 relative overflow-x-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-primary-red via-primary-blue to-primary-red relative overflow-x-hidden">
         <AnimatedBackground />
         <Navigation />
         <main className="relative z-10">
