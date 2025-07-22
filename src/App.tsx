@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
-import { AnimatedBackground } from './components/AnimatedBackground';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Academics } from './pages/Academics';
@@ -17,8 +17,8 @@ import { CBSEDisclosure } from './pages/CBSEDisclosure';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-primary-red via-primary-blue to-primary-red relative overflow-x-hidden">
-        <AnimatedBackground />
+      <ScrollToTop />
+      <div className="min-h-screen bg-gradient-to-br from-background to-gray-100 text-text-primary relative overflow-x-hidden">
         <Navigation />
         <main className="relative z-10">
           <Routes>
