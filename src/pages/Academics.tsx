@@ -136,14 +136,15 @@ export function Academics() {
   ];
 
   return (
-    <div className="pt-16 lg:pt-20">
+    <div className="pt-16 lg:pt-20 bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
-        <div 
+      <section className="relative py-20 overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/60" />
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+            backgroundImage: 'url(https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            mixBlendMode: 'overlay'
           }}
         />
         
@@ -171,9 +172,9 @@ export function Academics() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Academic Framework</h2>
-            <p className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Our curriculum follows CBSE guidelines while incorporating innovative teaching methods 
+            <h2 className="text-4xl font-bold text-text-primary mb-6">Our Academic Framework</h2>
+            <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
+              Our curriculum follows CBSE guidelines while incorporating innovative teaching methods
               and technology-enhanced learning to prepare students for the challenges of the 21st century.
             </p>
           </motion.div>
@@ -192,13 +193,13 @@ export function Academics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                className="text-center bg-white rounded-2xl p-6 border border-border shadow-lg"
               >
-                <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-3 rounded-2xl mx-auto w-fit mb-4">
-                  <stat.icon className="h-6 w-6 text-blue-900" />
+                <div className="bg-gradient-to-br from-secondary to-orange-500 p-3 rounded-2xl mx-auto w-fit mb-4">
+                  <stat.icon className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 font-medium text-sm">{stat.label}</div>
+                <div className="text-2xl font-bold text-text-primary mb-2">{stat.value}</div>
+                <div className="text-text-secondary font-medium text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -206,7 +207,7 @@ export function Academics() {
       </section>
 
       {/* Academic Programs Accordion */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -214,8 +215,8 @@ export function Academics() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Academic Programs</h2>
-            <p className="text-xl text-gray-200">
+            <h2 className="text-4xl font-bold text-text-primary mb-6">Academic Programs</h2>
+            <p className="text-xl text-text-secondary">
               Explore our comprehensive educational offerings
             </p>
           </motion.div>
@@ -228,23 +229,23 @@ export function Academics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden"
+                className="bg-white rounded-2xl border border-border overflow-hidden shadow-lg"
               >
                 <button
                   onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-300"
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="p-2 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg">
-                      <section.icon className="h-6 w-6 text-blue-900" />
+                    <div className="p-2 bg-gradient-to-br from-secondary to-orange-500 rounded-lg">
+                      <section.icon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{section.title}</h3>
+                    <h3 className="text-xl font-semibold text-text-primary">{section.title}</h3>
                   </div>
                   <motion.div
                     animate={{ rotate: openAccordion === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown className="h-6 w-6 text-gray-300" />
+                    <ChevronDown className="h-6 w-6 text-text-secondary" />
                   </motion.div>
                 </button>
                 
@@ -257,8 +258,8 @@ export function Academics() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 pt-0 border-t border-white/10">
-                        <div className="text-gray-200 leading-relaxed whitespace-pre-line">
+                      <div className="p-6 pt-0 border-t border-border">
+                        <div className="text-text-secondary leading-relaxed whitespace-pre-line">
                           {section.content}
                         </div>
                       </div>
@@ -271,69 +272,6 @@ export function Academics() {
         </div>
       </section>
 
-      {/* Subject Streams */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Subject Streams</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Choose from diverse academic streams tailored to your interests and career goals
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Science Stream",
-                subjects: ["Physics", "Chemistry", "Mathematics", "Biology", "Computer Science"],
-                description: "Ideal for students aspiring for engineering, medical, and research careers",
-                color: "from-blue-500 to-cyan-500"
-              },
-              {
-                title: "Commerce Stream",
-                subjects: ["Accountancy", "Business Studies", "Economics", "Mathematics", "Informatics"],
-                description: "Perfect for future business leaders, chartered accountants, and economists",
-                color: "from-green-500 to-emerald-500"
-              },
-              {
-                title: "Humanities Stream",
-                subjects: ["History", "Geography", "Political Science", "Psychology", "Sociology"],
-                description: "Designed for students interested in social sciences, law, and liberal arts",
-                color: "from-purple-500 to-pink-500"
-              }
-            ].map((stream, index) => (
-              <motion.div
-                key={stream.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 group hover:bg-white/20 transition-all duration-300"
-              >
-                <div className={`w-full h-2 bg-gradient-to-r ${stream.color} rounded-full mb-6`} />
-                <h3 className="text-2xl font-bold text-white mb-4">{stream.title}</h3>
-                <p className="text-gray-200 mb-6">{stream.description}</p>
-                <div className="space-y-2">
-                  <h4 className="text-yellow-300 font-semibold mb-3">Core Subjects:</h4>
-                  <ul className="space-y-1">
-                    {stream.subjects.map((subject) => (
-                      <li key={subject} className="text-gray-200 text-sm flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
-                        <span>{subject}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

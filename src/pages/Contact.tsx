@@ -85,14 +85,15 @@ export function Contact() {
   ];
 
   return (
-    <div className="pt-16 lg:pt-20">
+    <div className="pt-16 lg:pt-20 bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
-        <div 
+      <section className="relative py-20 overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/60" />
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+            backgroundImage: 'url(https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            mixBlendMode: 'overlay'
           }}
         />
         
@@ -120,8 +121,8 @@ export function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Get In Touch</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-text-primary mb-6">Get In Touch</h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               We're here to help with any questions or information you need
             </p>
           </motion.div>
@@ -134,15 +135,15 @@ export function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center group hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 border border-border text-center group shadow-lg"
               >
                 <div className={`bg-gradient-to-br ${info.color} p-4 rounded-2xl mx-auto w-fit mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <info.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{info.title}</h3>
+                <h3 className="text-xl font-bold text-text-primary mb-4">{info.title}</h3>
                 <div className="space-y-2">
                   {info.details.map((detail, i) => (
-                    <p key={i} className="text-gray-200 text-sm">{detail}</p>
+                    <p key={i} className="text-text-secondary text-sm">{detail}</p>
                   ))}
                 </div>
               </motion.div>
@@ -152,7 +153,7 @@ export function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -160,8 +161,8 @@ export function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Find Us</h2>
-            <p className="text-xl text-gray-200">
+            <h2 className="text-4xl font-bold text-text-primary mb-6">Find Us</h2>
+            <p className="text-xl text-text-secondary">
               Conveniently located in the heart of the academic district
             </p>
           </motion.div>
@@ -170,9 +171,9 @@ export function Contact() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 overflow-hidden"
+            className="bg-white rounded-2xl p-4 border border-border overflow-hidden shadow-lg"
           >
-            <div className="w-full h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <div className="w-full h-96 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center">
               <div className="text-center text-white">
                 <MapPin className="h-16 w-16 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Interactive Map</h3>
@@ -193,34 +194,34 @@ export function Contact() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+              className="bg-white rounded-2xl p-8 border border-border shadow-lg"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <MessageSquare className="h-8 w-8 text-yellow-400" />
-                <h3 className="text-2xl font-bold text-white">Send Message</h3>
+                <MessageSquare className="h-8 w-8 text-secondary" />
+                <h3 className="text-2xl font-bold text-text-primary">Send Message</h3>
               </div>
 
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">Name *</label>
+                    <label className="block text-text-primary font-medium mb-2">Name *</label>
                     <input
                       type="text"
                       value={contactForm.name}
                       onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Email *</label>
+                    <label className="block text-text-primary font-medium mb-2">Email *</label>
                     <input
                       type="email"
                       value={contactForm.email}
                       onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                       placeholder="Your email address"
                     />
                   </div>
@@ -228,22 +229,22 @@ export function Contact() {
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">Phone</label>
+                    <label className="block text-text-primary font-medium mb-2">Phone</label>
                     <input
                       type="tel"
                       value={contactForm.phone}
                       onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                       placeholder="Your phone number"
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Subject *</label>
+                    <label className="block text-text-primary font-medium mb-2">Subject *</label>
                     <select
                       value={contactForm.subject}
                       onChange={(e) => setContactForm({...contactForm, subject: e.target.value})}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary focus:outline-none focus:border-primary transition-colors duration-300"
                     >
                       <option value="">Select Subject</option>
                       <option value="admissions">Admissions Enquiry</option>
@@ -257,13 +258,13 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Message *</label>
+                  <label className="block text-text-primary font-medium mb-2">Message *</label>
                   <textarea
                     value={contactForm.message}
                     onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                     placeholder="Your message..."
                   />
                 </div>
@@ -271,11 +272,11 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-secondary to-orange-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-blue-900/30 border-t-blue-900 rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       <span>Sending...</span>
                     </>
                   ) : (
@@ -293,58 +294,58 @@ export function Contact() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+              className="bg-white rounded-2xl p-8 border border-border shadow-lg"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <User className="h-8 w-8 text-yellow-400" />
-                <h3 className="text-2xl font-bold text-white">Quick Enquiry</h3>
+                <User className="h-8 w-8 text-secondary" />
+                <h3 className="text-2xl font-bold text-text-primary">Quick Enquiry</h3>
               </div>
 
               <form onSubmit={handleEnquirySubmit} className="space-y-6">
                 <div>
-                  <label className="block text-white font-medium mb-2">Student Name *</label>
+                  <label className="block text-text-primary font-medium mb-2">Student Name *</label>
                   <input
                     type="text"
                     value={enquiryForm.name}
                     onChange={(e) => setEnquiryForm({...enquiryForm, name: e.target.value})}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                     placeholder="Student's full name"
                   />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">Parent Email *</label>
+                    <label className="block text-text-primary font-medium mb-2">Parent Email *</label>
                     <input
                       type="email"
                       value={enquiryForm.email}
                       onChange={(e) => setEnquiryForm({...enquiryForm, email: e.target.value})}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                       placeholder="Parent's email"
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Phone *</label>
+                    <label className="block text-text-primary font-medium mb-2">Phone *</label>
                     <input
                       type="tel"
                       value={enquiryForm.phone}
                       onChange={(e) => setEnquiryForm({...enquiryForm, phone: e.target.value})}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
                       placeholder="Contact number"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Class Seeking Admission *</label>
+                  <label className="block text-text-primary font-medium mb-2">Class Seeking Admission *</label>
                   <select
                     value={enquiryForm.class}
                     onChange={(e) => setEnquiryForm({...enquiryForm, class: e.target.value})}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary focus:outline-none focus:border-primary transition-colors duration-300"
                   >
                     <option value="">Select Class</option>
                     <option value="pre-kg">Pre-KG</option>
@@ -357,12 +358,12 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Additional Message</label>
+                  <label className="block text-text-primary font-medium mb-2">Additional Message</label>
                   <textarea
                     value={enquiryForm.message}
                     onChange={(e) => setEnquiryForm({...enquiryForm, message: e.target.value})}
                     rows={3}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-yellow-400 transition-colors duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border border-border rounded-lg text-text-primary placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                     placeholder="Any specific questions or requirements..."
                   />
                 </div>
@@ -370,7 +371,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-primary to-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -386,11 +387,11 @@ export function Contact() {
                 </button>
               </form>
 
-              <div className="mt-6 bg-blue-900/20 border border-blue-400/30 rounded-lg p-4">
+              <div className="mt-6 bg-blue-100 border border-blue-200 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
-                  <AlertCircle className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <div className="text-sm text-blue-200">
-                    <p className="font-medium mb-1">Quick Response Guarantee</p>
+                  <AlertCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div className="text-sm text-text-secondary">
+                    <p className="font-medium mb-1 text-primary">Quick Response Guarantee</p>
                     <p>We'll get back to you within 24 hours with detailed information about admission procedures and next steps.</p>
                   </div>
                 </div>
@@ -406,18 +407,18 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-md w-full text-center"
+            className="bg-white rounded-2xl p-8 border border-border max-w-md w-full text-center shadow-lg"
           >
             <div className="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-            <p className="text-gray-200 mb-6">
+            <h3 className="text-2xl font-bold text-text-primary mb-4">Message Sent!</h3>
+            <p className="text-text-secondary mb-6">
               Thank you for contacting us. We'll respond to your message within 24 hours.
             </p>
             <button
               onClick={() => setShowContactModal(false)}
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-secondary to-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
               Close
             </button>
@@ -431,18 +432,18 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-md w-full text-center"
+            className="bg-white rounded-2xl p-8 border border-border max-w-md w-full text-center shadow-lg"
           >
-            <div className="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Enquiry Submitted!</h3>
-            <p className="text-gray-200 mb-6">
+            <h3 className="text-2xl font-bold text-text-primary mb-4">Enquiry Submitted!</h3>
+            <p className="text-text-secondary mb-6">
               We've received your admission enquiry. Our admissions team will contact you soon with detailed information.
             </p>
             <button
               onClick={() => setShowEnquiryModal(false)}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
               Close
             </button>

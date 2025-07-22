@@ -32,22 +32,18 @@ export function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background shadow-md`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className={`p-2 bg-gradient-to-r from-primary-blue to-blue-500 rounded-lg group-hover:scale-110 transition-transform duration-300`}>
-              <GraduationCap className="h-8 w-8 text-light-white" />
+            <div className={`p-2 bg-gradient-to-r from-primary to-blue-500 rounded-lg group-hover:scale-110 transition-transform duration-300`}>
+              <GraduationCap className="h-8 w-8 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className={`text-xl font-bold ${isScrolled ? 'text-primary-blue' : 'text-light-white'}`}>SFS CBSE School</h1>
-              <p className={`text-xs ${isScrolled ? 'text-blue-500' : 'text-blue-200'}`}>Excellence in Education</p>
+              <h1 className={`text-xl font-bold text-primary`}>SFS CBSE School</h1>
+              <p className={`text-xs text-secondary`}>Excellence in Education</p>
             </div>
           </Link>
 
@@ -59,15 +55,15 @@ export function Navigation() {
                 to={item.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group ${
                   location.pathname === item.path
-                    ? `text-light-white bg-primary-red`
-                    : `${isScrolled ? 'text-primary-blue' : 'text-light-white'} hover:text-light-white hover:bg-primary-red`
+                    ? `text-primary`
+                    : `text-text-primary hover:text-primary`
                 }`}
               >
                 {item.label}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-primary-red rounded-lg"
+                    className="absolute inset-x-0 bottom-0 h-1 bg-primary rounded-lg"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -79,7 +75,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-lg ${isScrolled ? 'text-primary-blue' : 'text-white'} hover:bg-gray-200 transition-colors duration-300`}
+            className={`lg:hidden p-2 rounded-lg text-primary hover:bg-gray-200 transition-colors duration-300`}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -93,7 +89,7 @@ export function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-white shadow-lg"
+            className="lg:hidden bg-background shadow-lg"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
@@ -103,8 +99,8 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                     location.pathname === item.path
-                      ? 'text-light-white bg-primary-red'
-                      : 'text-primary-blue hover:text-light-white hover:bg-primary-red'
+                      ? 'text-primary bg-gray-100'
+                      : 'text-text-primary hover:text-primary hover:bg-gray-100'
                   }`}
                 >
                   {item.label}
