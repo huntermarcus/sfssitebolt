@@ -1,21 +1,21 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
-import type { Engine } from "@tsparticles/engine";
+import { loadAll } from "@tsparticles/all";
+import type { Container, Engine } from "@tsparticles/engine";
 
 export function AnimatedBackground() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadFull(engine);
+      await loadAll(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    console.log("Particles container loaded:", container);
   }, []);
 
   if (!init) {
@@ -25,6 +25,7 @@ export function AnimatedBackground() {
   return (
     <Particles
       id="tsparticles"
+      particlesLoaded={particlesLoaded}
       options={{
         background: {
           color: {
@@ -38,7 +39,9 @@ export function AnimatedBackground() {
               enable: true,
               mode: "repulse",
             },
-            resize: true,
+            resize: {
+              enable: true,
+            },
           },
           modes: {
             repulse: {
@@ -74,7 +77,6 @@ export function AnimatedBackground() {
           number: {
             density: {
               enable: true,
-              area: 800,
             },
             value: 80,
           },
