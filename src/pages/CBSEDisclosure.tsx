@@ -39,28 +39,29 @@ export function CBSEDisclosure() {
   ];
 
   const documents = [
-    { name: "AFFILIATION / UPGRADATION LETTER AND RECENT EXTENSION OF AFFILIATION", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Affiliation-2027s.pdf" },
-    { name: "SOCIETIES / TRUST / COMPANY REGISTRATION / RENEWAL CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SOCEITY REGISTRATION CERTIFICATE.pdf" },
-    { name: "NO OBJECTION CERTIFICATE (NOC) ISSUED, BY THIS STATE GOVT.", link: "https://montforttrichy.com/wp-content/uploads/2023/06/NOC.pdf" },
-    { name: "RECOGNITION CERTIFICATE UNDER RTE ACT, 2009", link: "https://montforttrichy.com/wp-content/uploads/2023/06/RECOGNITION_CERTIFICATES.pdf" },
-    { name: "BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/BUILDING_SAFETY_CERTIFICATE.pdf" },
-    { name: "FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Fire-Safety-Certificates.pdf" },
-    { name: "THE DEO CERTIFICATE / SELF CERTIFICATION PROFORMA", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SELF_CERTIFICATION_PROFORMA.pdf" },
-    { name: "HEALTH AND SANITATION CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/WATERHEALTH_CERTIFICATE_2024.pdf" },
-    { name: "WATER SAMPLE TEST REPORT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/WATERREPORTS.pdf" },
-    { name: "LAND CERTIFICATE", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Landcertificate.pdf" },
-    { name: "SCHOOL AFFIDAVIT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SCHOOLAFFIDAVIT.pdf" },
+    { name: "PUBLIC MANDATORY DISCLOSURE", link: "https://sfspublicschooltrichy.in/docs/PUBLIC MANDATORY DISCLOSURE.pdf" },
+    { name: "AFFILIATION / UPGRADATION LETTER AND RECENT EXTENSION OF AFFILIATION", link: "https://sfspublicschooltrichy.in/docs/Affiliation-2027s.pdf" },
+    { name: "SOCIETIES / TRUST / COMPANY REGISTRATION / RENEWAL CERTIFICATE", link: "https://sfspublicschooltrichy.in/docs/SOCEITY REGISTRATION CERTIFICATE.pdf" },
+    { name: "NO OBJECTION CERTIFICATE (NOC) ISSUED, BY THIS STATE GOVT.", link: "https://sfspublicschooltrichy.in/docs/NOC.pdf" },
+    { name: "RECOGNITION CERTIFICATE UNDER RTE ACT, 2009", link: "https://sfspublicschooltrichy.in/docs/RECOGNITION_CERTIFICATES.pdf" },
+    { name: "BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE", link: "https://sfspublicschooltrichy.in/docs/BUILDING_SAFETY_CERTIFICATE.pdf" },
+    { name: "FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY", link: "https://sfspublicschooltrichy.in/docs/Fire-Safety-Certificates.pdf" },
+    { name: "THE DEO CERTIFICATE / SELF CERTIFICATION PROFORMA", link: "https://sfspublicschooltrichy.in/docs/SELF_CERTIFICATION_PROFORMA.pdf" },
+    { name: "HEALTH AND SANITATION CERTIFICATE", link: "https://sfspublicschooltrichy.in/docs/WATERHEALTH_CERTIFICATE_2024.pdf" },
+    { name: "WATER SAMPLE TEST REPORT", link: "https://sfspublicschooltrichy.in/docs/WATERREPORTS.pdf" },
+    { name: "LAND CERTIFICATE", link: "https://sfspublicschooltrichy.in/docs/Landcertificate.pdf" },
+    { name: "SCHOOL AFFIDAVIT", link: "https://sfspublicschooltrichy.in/docs/SCHOOLAFFIDAVIT.pdf" },
   ];
 
   const academicDocs = [
-    { name: "FEE STRUCTURE OF THE SCHOOL", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Fee-Structure 2024-2025.pdf" },
-    { name: "ANNUAL ACADEMIC CALENDAR", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Academic Calender 2024-25.pdf" },
-    { name: "LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)", link: "https://montforttrichy.com/wp-content/uploads/2023/06/SMCC.pdf" },
-    { name: "LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS", link: "https://montforttrichy.com/wp-content/uploads/2023/06/PTA.pdf" },
-    { name: "LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABLITY", link: "https://montforttrichy.com/wp-content/uploads/2023/06/X & XII Results_Montfort School.pdf" },
-    { name: "DECLARATION OF BOOKS CONTENT", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Books.pdf" },
-    { name: "STAFF DETAILS", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Teaching-staff.pdf" },
-    { name: "STUDENTS STRENGTH", link: "https://montforttrichy.com/wp-content/uploads/2023/06/Students_Strength_2223.pdf" },
+    { name: "FEE STRUCTURE OF THE SCHOOL", link: "https://sfspublicschooltrichy.in/docs/Fee-Structure 2024-2025.pdf" },
+    { name: "ANNUAL ACADEMIC CALENDAR", link: "https://sfspublicschooltrichy.in/docs/Academic Calender 2024-25.pdf" },
+    { name: "LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)", link: "https://sfspublicschooltrichy.in/docs/SMCC.pdf" },
+    { name: "LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS", link: "https://sfspublicschooltrichy.in/docs/PTA.pdf" },
+    { name: "LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABLITY", link: "https://sfspublicschooltrichy.in/docs/X & XII Results_Montfort School.pdf" },
+    { name: "DECLARATION OF BOOKS CONTENT", link: "https://sfspublicschooltrichy.in/docs/Books.pdf" },
+    { name: "STAFF DETAILS", link: "https://sfspublicschooltrichy.in/docs/Teaching-staff.pdf" },
+    { name: "STUDENTS STRENGTH", link: "https://sfspublicschooltrichy.in/docs/Students_Strength_2223.pdf" },
   ];
 
   const resultsX = [
@@ -113,11 +114,11 @@ export function CBSEDisclosure() {
   ];
 
   return (
-    <div className="pt-16 lg:pt-20 bg-white">
+    <div className="pt-16 lg:pt-20 bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden shadow-lg">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/80 to-primary-red/80" />
-        <div 
+      <section className="relative py-20 overflow-hidden bg-primary shadow-lg">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/60" />
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1920)',
@@ -141,7 +142,7 @@ export function CBSEDisclosure() {
       </section>
 
       {/* Navigation Tabs */}
-      <section className="py-12 bg-light-gray backdrop-blur-sm shadow-md">
+      <section className="py-12 bg-gray-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -155,8 +156,8 @@ export function CBSEDisclosure() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-lg ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-primary-red to-secondary-red text-white'
-                    : 'bg-white text-primary-blue hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-primary to-blue-600 text-white'
+                    : 'bg-white text-text-primary hover:bg-gray-100'
                 }`}
               >
                 <tab.icon className="h-5 w-5" />
@@ -177,16 +178,15 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
-              data-aos="fade-up"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-blue mb-4">A. GENERAL INFORMATION</h2>
+                <h2 className="text-4xl font-bold text-text-primary mb-4">A. GENERAL INFORMATION</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+              <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
+                    <thead className="bg-gradient-to-r from-primary to-blue-600">
                       <tr>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
@@ -199,10 +199,10 @@ export function CBSEDisclosure() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
+                          className="border-b border-border hover:bg-gray-50 transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-gray-800 font-medium">{info.field}</td>
-                          <td className="px-6 py-4 text-gray-600">{info.value}</td>
+                          <td className="px-6 py-4 text-text-secondary font-medium">{info.field}</td>
+                          <td className="px-6 py-4 text-text-secondary">{info.value}</td>
                         </motion.tr>
                       ))}
                     </tbody>
@@ -218,10 +218,9 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
-              data-aos="fade-up"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-blue mb-4">B. DOCUMENTS / INFORMATION</h2>
+                <h2 className="text-4xl font-bold text-text-primary mb-4">B. DOCUMENTS / INFORMATION</h2>
               </div>
 
               <div className="space-y-6">
@@ -231,20 +230,18 @@ export function CBSEDisclosure() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 shadow-lg"
-                    data-aos="fade-up"
-                    data-aos-delay={index * 100}
+                    className="bg-white rounded-2xl p-6 border border-border shadow-lg"
                   >
                     <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-bold text-primary-blue mb-4 flex items-center space-x-2">
-                        <FileText className="h-6 w-6 text-secondary-red" />
+                        <h3 className="text-xl font-bold text-text-primary mb-4 flex items-center space-x-2">
+                        <FileText className="h-6 w-6 text-secondary" />
                         <span>{doc.name}</span>
                         </h3>
                         <div className="flex space-x-2">
-                            <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-blue rounded-lg hover:bg-secondary-blue transition-colors duration-300">
+                            <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary rounded-lg hover:bg-blue-600 transition-colors duration-300">
                                 <Eye className="h-4 w-4 text-white" />
                             </a>
-                            <a href={doc.link} download className="p-2 bg-primary-red rounded-lg hover:bg-secondary-red transition-colors duration-300">
+                            <a href={doc.link} download className="p-2 bg-secondary rounded-lg hover:bg-orange-600 transition-colors duration-300">
                                 <Download className="h-4 w-4 text-white" />
                             </a>
                         </div>
@@ -261,24 +258,23 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
-              data-aos="fade-up"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-blue mb-4">C. RESULT AND ACADEMICS</h2>
+                <h2 className="text-4xl font-bold text-text-primary mb-4">C. RESULT AND ACADEMICS</h2>
               </div>
 
               <div className="space-y-8">
                 {/* Academic Documents */}
-                 <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
-                        <FileText className="h-6 w-6 text-secondary-red" />
+                 <div className="bg-white rounded-2xl p-8 border border-border shadow-lg">
+                    <h3 className="text-2xl font-bold text-text-primary mb-6 flex items-center space-x-2">
+                        <FileText className="h-6 w-6 text-secondary" />
                         <span>Documents</span>
                     </h3>
                     <div className="space-y-4">
                         {academicDocs.map((doc, index) => (
-                            <div key={index} className="flex items-center justify-between bg-light-gray p-4 rounded-lg" data-aos="fade-left" data-aos-delay={index * 100}>
-                                <span className="font-medium text-gray-800">{doc.name}</span>
-                                <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-blue rounded-lg hover:bg-secondary-blue transition-colors duration-300">
+                            <div key={index} className="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
+                                <span className="font-medium text-text-secondary">{doc.name}</span>
+                                <a href={doc.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary rounded-lg hover:bg-blue-600 transition-colors duration-300">
                                     <Eye className="h-4 w-4 text-white" />
                                 </a>
                             </div>
@@ -287,15 +283,15 @@ export function CBSEDisclosure() {
                 </div>
 
                 {/* Class X Results */}
-                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="400">
-                  <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
-                    <Award className="h-6 w-6 text-secondary-red" />
+                <div className="bg-white rounded-2xl p-8 border border-border shadow-lg">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6 flex items-center space-x-2">
+                    <Award className="h-6 w-6 text-secondary" />
                     <span>RESULT - CLASS X</span>
                   </h3>
                   
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
+                      <thead className="bg-gradient-to-r from-primary to-blue-600">
                         <tr>
                           <th className="px-6 py-3 text-left text-sm font-semibold text-white">YEAR</th>
                           <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF REGISTERED STUDENTS</th>
@@ -310,11 +306,11 @@ export function CBSEDisclosure() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
+                            className="border-b border-border hover:bg-gray-50 transition-colors duration-300"
                           >
-                            <td className="px-6 py-4 text-gray-800 font-medium">{result.year}</td>
-                            <td className="px-6 py-4 text-gray-600">{result.registered}</td>
-                            <td className="px-6 py-4 text-gray-600">{result.passed}</td>
+                            <td className="px-6 py-4 text-text-secondary font-medium">{result.year}</td>
+                            <td className="px-6 py-4 text-text-secondary">{result.registered}</td>
+                            <td className="px-6 py-4 text-text-secondary">{result.passed}</td>
                             <td className="px-6 py-4">
                               <span className="bg-green-500/20 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                                 {result.percentage}%
@@ -328,15 +324,15 @@ export function CBSEDisclosure() {
                 </div>
 
                 {/* Class XII Results */}
-                <div className="bg-white backdrop-blur-md rounded-2xl p-8 border border-gray-200 shadow-lg" data-aos="fade-up" data-aos-delay="600">
-                  <h3 className="text-2xl font-bold text-primary-blue mb-6 flex items-center space-x-2">
-                    <Award className="h-6 w-6 text-secondary-red" />
+                <div className="bg-white rounded-2xl p-8 border border-border shadow-lg">
+                  <h3 className="text-2xl font-bold text-text-primary mb-6 flex items-center space-x-2">
+                    <Award className="h-6 w-6 text-secondary" />
                     <span>RESULT - CLASS XII</span>
                   </h3>
                   
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gradient-to-r from-primary-red to-secondary-red">
+                      <thead className="bg-gradient-to-r from-secondary to-orange-600">
                         <tr>
                           <th className="px-6 py-3 text-left text-sm font-semibold text-white">YEAR</th>
                           <th className="px-6 py-3 text-left text-sm font-semibold text-white">NO. OF REGISTERED STUDENTS</th>
@@ -351,11 +347,11 @@ export function CBSEDisclosure() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
+                            className="border-b border-border hover:bg-gray-50 transition-colors duration-300"
                           >
-                            <td className="px-6 py-4 text-gray-800 font-medium">{result.year}</td>
-                            <td className="px-6 py-4 text-gray-600">{result.registered}</td>
-                            <td className="px-6 py-4 text-gray-600">{result.passed}</td>
+                            <td className="px-6 py-4 text-text-secondary font-medium">{result.year}</td>
+                            <td className="px-6 py-4 text-text-secondary">{result.registered}</td>
+                            <td className="px-6 py-4 text-text-secondary">{result.passed}</td>
                             <td className="px-6 py-4">
                               <span className="bg-green-500/20 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                                 {result.percentage}%
@@ -377,16 +373,15 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
-              data-aos="fade-up"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-blue mb-4">D. STAFF DETAILS</h2>
+                <h2 className="text-4xl font-bold text-text-primary mb-4">D. STAFF DETAILS</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+              <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
+                    <thead className="bg-gradient-to-r from-primary to-blue-600">
                       <tr>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
@@ -399,10 +394,10 @@ export function CBSEDisclosure() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
+                          className="border-b border-border hover:bg-gray-50 transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-gray-800 font-medium">{staff.category}</td>
-                          <td className="px-6 py-4 text-gray-600">{staff.details}</td>
+                          <td className="px-6 py-4 text-text-secondary font-medium">{staff.category}</td>
+                          <td className="px-6 py-4 text-text-secondary">{staff.details}</td>
                         </motion.tr>
                       ))}
                     </tbody>
@@ -418,16 +413,15 @@ export function CBSEDisclosure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="space-y-8"
-              data-aos="fade-up"
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-blue mb-4">E. INFRASTRUCTURE</h2>
+                <h2 className="text-4xl font-bold text-text-primary mb-4">E. INFRASTRUCTURE</h2>
               </div>
 
-              <div className="bg-white backdrop-blur-md rounded-2xl border border-gray-200 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+              <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-lg">
                 <div className="overflow-x-auto">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-primary-red to-secondary-red">
+                    <thead className="bg-gradient-to-r from-secondary to-orange-600">
                       <tr>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">INFORMATION</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-white">DETAILS</th>
@@ -440,10 +434,10 @@ export function CBSEDisclosure() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.03 }}
-                          className="border-b border-gray-200 hover:bg-light-gray transition-colors duration-300"
+                          className="border-b border-border hover:bg-gray-50 transition-colors duration-300"
                         >
-                          <td className="px-6 py-4 text-gray-800 font-medium">{item.facility}</td>
-                          <td className="px-6 py-4 text-gray-600">{item.details}</td>
+                          <td className="px-6 py-4 text-text-secondary font-medium">{item.facility}</td>
+                          <td className="px-6 py-4 text-text-secondary">{item.details}</td>
                         </motion.tr>
                       ))}
                     </tbody>
