@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Users, Award, Camera } from 'lucide-react';
 
+interface GalleryImage {
+  id: number;
+  src: string;
+  title: string;
+  category: string;
+  year: string;
+  description: string;
+}
+
 export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedFilter, setSelectedFilter] = useState('all');
 
   const galleryImages = [
@@ -124,7 +133,7 @@ export function Gallery() {
     <div className="pt-16 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-dark/70 to-neutral-dark/50" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -139,8 +148,8 @@ export function Gallery() {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold text-white">Photo Gallery</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-6xl font-bold text-neutral-light">Photo Gallery</h1>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Capturing moments of learning, growth, and achievement at SFS CBSE School
             </p>
           </motion.div>
@@ -148,7 +157,7 @@ export function Gallery() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-12 bg-white/5 backdrop-blur-sm">
+      <section className="py-12 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -160,10 +169,10 @@ export function Gallery() {
               <button
                 key={filter.key}
                 onClick={() => setSelectedFilter(filter.key)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-lg ${
                   selectedFilter === filter.key
-                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900'
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                    ? 'bg-gradient-to-r from-primary-red to-secondary-red text-white'
+                    : 'bg-white text-primary-blue hover:bg-neutral-light'
                 }`}
               >
                 <filter.icon className="h-5 w-5" />
@@ -178,7 +187,7 @@ export function Gallery() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="text-gray-200">
+            <p className="text-neutral-gray">
               {filteredImages.length} photos {selectedFilter !== 'all' && `in ${filters.find(f => f.key === selectedFilter)?.label}`}
             </p>
           </motion.div>
@@ -186,7 +195,7 @@ export function Gallery() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             layout
@@ -201,7 +210,7 @@ export function Gallery() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 cursor-pointer"
+                  className="group relative overflow-hidden rounded-2xl bg-white shadow-lg cursor-pointer"
                   onClick={() => setSelectedImage(image)}
                 >
                   <div className="aspect-square overflow-hidden">
@@ -216,12 +225,12 @@ export function Gallery() {
                   
                   <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-white font-semibold mb-1">{image.title}</h3>
-                    <p className="text-gray-200 text-sm">{image.description}</p>
+                    <p className="text-neutral-light text-sm">{image.description}</p>
                     <div className="flex items-center justify-between mt-2">
-                      <span className="bg-yellow-400/20 text-yellow-300 px-2 py-1 rounded text-xs font-medium">
+                      <span className="bg-accent-gold/80 text-white px-2 py-1 rounded text-xs font-medium">
                         {image.category}
                       </span>
-                      <span className="text-gray-300 text-xs">{image.year}</span>
+                      <span className="text-neutral-light text-xs">{image.year}</span>
                     </div>
                   </div>
                 </motion.div>
@@ -245,7 +254,7 @@ export function Gallery() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="relative max-w-4xl max-h-[90vh] bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden"
+              className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -262,13 +271,13 @@ export function Gallery() {
               />
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{selectedImage.title}</h3>
-                <p className="text-gray-200 mb-4">{selectedImage.description}</p>
+                <h3 className="text-2xl font-bold text-neutral-dark mb-2">{selectedImage.title}</h3>
+                <p className="text-neutral-gray mb-4">{selectedImage.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="bg-yellow-400/20 text-yellow-300 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-accent-gold/20 text-accent-gold px-3 py-1 rounded-full text-sm font-medium">
                     {selectedImage.category}
                   </span>
-                  <span className="text-gray-300">{selectedImage.year}</span>
+                  <span className="text-neutral-gray">{selectedImage.year}</span>
                 </div>
               </div>
             </motion.div>
@@ -277,7 +286,7 @@ export function Gallery() {
       </AnimatePresence>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -285,8 +294,8 @@ export function Gallery() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Moments Captured</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Moments Captured</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Every picture tells a story of growth, achievement, and memorable experiences
             </p>
           </motion.div>
@@ -304,10 +313,10 @@ export function Gallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                className="text-center bg-white rounded-2xl p-6 shadow-lg"
               >
-                <div className="text-3xl font-bold text-yellow-300 mb-2">{stat.value}</div>
-                <div className="text-gray-300 font-medium">{stat.label}</div>
+                <div className="text-3xl font-bold text-accent-gold mb-2">{stat.value}</div>
+                <div className="text-neutral-gray font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -315,7 +324,7 @@ export function Gallery() {
       </section>
 
       {/* Year Filter */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -323,18 +332,18 @@ export function Gallery() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-white">Browse by Year</h2>
+            <h2 className="text-3xl font-bold text-neutral-dark">Browse by Year</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {years.map((year) => (
                 <button
                   key={year}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+                  className="bg-white shadow-lg border border-neutral-light text-primary-blue px-8 py-4 rounded-full font-semibold hover:bg-neutral-light transition-all duration-300"
                 >
                   {year} Gallery
                 </button>
               ))}
             </div>
-            <p className="text-gray-200">
+            <p className="text-neutral-gray">
               Explore our photo collections from different academic years
             </p>
           </motion.div>

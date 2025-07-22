@@ -129,7 +129,7 @@ export function Activities() {
     <div className="pt-16 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-dark/70 to-neutral-dark/50" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -144,8 +144,8 @@ export function Activities() {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold text-white">Activities & Sports</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-6xl font-bold text-neutral-light">Activities & Sports</h1>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Comprehensive programs for holistic development beyond academics
             </p>
           </motion.div>
@@ -153,7 +153,7 @@ export function Activities() {
       </section>
 
       {/* Co-Curricular Activities */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -161,8 +161,8 @@ export function Activities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Co-Curricular Activities</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Co-Curricular Activities</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Diverse programs to nurture creativity, leadership, and personal growth
             </p>
           </motion.div>
@@ -175,19 +175,19 @@ export function Activities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 group hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg group hover:shadow-2xl transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-4 rounded-2xl mx-auto w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <activity.icon className="h-8 w-8 text-blue-900" />
+                <div className="bg-gradient-to-br from-accent-gold to-yellow-500 p-4 rounded-2xl mx-auto w-fit mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <activity.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{activity.title}</h3>
-                <p className="text-gray-200 mb-4">{activity.description}</p>
+                <h3 className="text-xl font-bold text-neutral-dark mb-3">{activity.title}</h3>
+                <p className="text-neutral-gray mb-4">{activity.description}</p>
                 <div className="space-y-2">
-                  <h4 className="text-yellow-300 font-semibold text-sm">Activities Include:</h4>
+                  <h4 className="text-primary-blue font-semibold text-sm">Activities Include:</h4>
                   <ul className="space-y-1">
                     {activity.activities.map((item) => (
-                      <li key={item} className="text-gray-300 text-sm flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
+                      <li key={item} className="text-neutral-gray text-sm flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-primary-blue rounded-full" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -200,7 +200,7 @@ export function Activities() {
       </section>
 
       {/* Sports Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,8 +208,8 @@ export function Activities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Sports & Athletics</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Sports & Athletics</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Professional coaching and state-of-the-art facilities for athletic excellence
             </p>
           </motion.div>
@@ -222,7 +222,7 @@ export function Activities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md border border-white/20"
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-lg"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -230,11 +230,11 @@ export function Activities() {
                     alt={sport.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/70 to-transparent" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{sport.name}</h3>
-                  <p className="text-gray-200">{sport.description}</p>
+                  <h3 className="text-xl font-bold text-neutral-dark mb-3">{sport.name}</h3>
+                  <p className="text-neutral-gray">{sport.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -254,13 +254,13 @@ export function Activities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                className="text-center bg-white rounded-2xl p-6 shadow-lg"
               >
-                <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-3 rounded-2xl mx-auto w-fit mb-4">
-                  <stat.icon className="h-6 w-6 text-blue-900" />
+                <div className="bg-gradient-to-br from-accent-gold to-yellow-500 p-3 rounded-2xl mx-auto w-fit mb-4 shadow-md">
+                  <stat.icon className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 font-medium text-sm">{stat.label}</div>
+                <div className="text-2xl font-bold text-neutral-dark mb-2">{stat.value}</div>
+                <div className="text-neutral-gray font-medium text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -268,7 +268,7 @@ export function Activities() {
       </section>
 
       {/* Clubs Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -276,8 +276,8 @@ export function Activities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Academic Clubs</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Academic Clubs</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Subject-specific clubs for deeper exploration and competitive excellence
             </p>
           </motion.div>
@@ -290,18 +290,18 @@ export function Activities() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 group hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg group hover:shadow-2xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-purple-400 to-pink-500 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-br from-primary-red to-secondary-red p-3 rounded-lg shadow-md group-hover:scale-110 transition-transform duration-300">
                     <club.icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-3">{club.name}</h3>
-                    <p className="text-gray-200 mb-4">{club.description}</p>
-                    <div className="bg-white/5 rounded-lg p-3">
-                      <h4 className="text-yellow-300 font-semibold text-sm mb-2">Key Activities:</h4>
-                      <p className="text-gray-300 text-sm">{club.activities}</p>
+                    <h3 className="text-xl font-bold text-neutral-dark mb-3">{club.name}</h3>
+                    <p className="text-neutral-gray mb-4">{club.description}</p>
+                    <div className="bg-neutral-light rounded-lg p-3">
+                      <h4 className="text-primary-blue font-semibold text-sm mb-2">Key Activities:</h4>
+                      <p className="text-neutral-gray text-sm">{club.activities}</p>
                     </div>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ export function Activities() {
       </section>
 
       {/* Student Council */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -320,8 +320,8 @@ export function Activities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Student Council</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Student Council</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Leadership opportunities to develop responsibility and governance skills
             </p>
           </motion.div>
@@ -334,20 +334,20 @@ export function Activities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+                className="bg-white rounded-2xl p-8 shadow-lg"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <Crown className="h-6 w-6 text-yellow-400" />
-                  <h3 className="text-xl font-bold text-white">{position.position}</h3>
+                  <Crown className="h-6 w-6 text-accent-gold" />
+                  <h3 className="text-xl font-bold text-neutral-dark">{position.position}</h3>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="text-yellow-300 font-semibold mb-2">Responsibilities:</h4>
-                    <p className="text-gray-200">{position.responsibilities}</p>
+                    <h4 className="text-primary-blue font-semibold mb-2">Responsibilities:</h4>
+                    <p className="text-neutral-gray">{position.responsibilities}</p>
                   </div>
                   <div>
-                    <h4 className="text-yellow-300 font-semibold mb-2">Selection Process:</h4>
-                    <p className="text-gray-200">{position.selection}</p>
+                    <h4 className="text-primary-blue font-semibold mb-2">Selection Process:</h4>
+                    <p className="text-neutral-gray">{position.selection}</p>
                   </div>
                 </div>
               </motion.div>
@@ -358,17 +358,17 @@ export function Activities() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-blue-900 text-center"
+            className="mt-12 bg-gradient-to-r from-primary-blue to-secondary-blue rounded-2xl p-8 text-white text-center shadow-2xl"
           >
             <h3 className="text-2xl font-bold mb-4">Ready to Lead?</h3>
-            <p className="text-lg mb-6">
+            <p className="text-lg mb-6 opacity-90">
               Student council elections are held annually. Develop your leadership skills and make a difference!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-300">
+              <button className="bg-white text-primary-blue px-6 py-3 rounded-lg font-semibold hover:bg-neutral-light transition-colors duration-300">
                 Learn More
               </button>
-              <button className="border-2 border-blue-900 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 hover:text-white transition-all duration-300">
+              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-all duration-300">
                 Join Activities
               </button>
             </div>

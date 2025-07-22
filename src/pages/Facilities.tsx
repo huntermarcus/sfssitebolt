@@ -5,7 +5,6 @@ import {
   Microscope, 
   Music, 
   Heart, 
-  Brain, 
   Bus, 
   Shield, 
   Wifi,
@@ -121,7 +120,7 @@ export function Facilities() {
     <div className="pt-16 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-dark/70 to-neutral-dark/50" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -136,8 +135,8 @@ export function Facilities() {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold text-white">World-Class Facilities</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-6xl font-bold text-neutral-light">World-Class Facilities</h1>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Modern infrastructure designed to enhance learning and provide a safe, nurturing environment
             </p>
           </motion.div>
@@ -145,7 +144,7 @@ export function Facilities() {
       </section>
 
       {/* Infrastructure Highlights */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -153,8 +152,8 @@ export function Facilities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Infrastructure Highlights</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Infrastructure Highlights</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Comprehensive facilities supporting academic excellence and holistic development
             </p>
           </motion.div>
@@ -172,35 +171,35 @@ export function Facilities() {
                 }`}
               >
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="relative overflow-hidden rounded-2xl group">
+                  <div className="relative overflow-hidden rounded-2xl group shadow-2xl">
                     <img
                       src={facility.image}
                       alt={facility.title}
                       className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/60 to-transparent" />
                   </div>
                 </div>
                 
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl">
-                      <facility.icon className="h-8 w-8 text-blue-900" />
+                    <div className="p-3 bg-gradient-to-br from-accent-gold to-yellow-500 rounded-xl shadow-lg">
+                      <facility.icon className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-white">{facility.title}</h3>
+                    <h3 className="text-3xl font-bold text-neutral-dark">{facility.title}</h3>
                   </div>
                   
-                  <p className="text-gray-200 text-lg leading-relaxed">
+                  <p className="text-neutral-gray text-lg leading-relaxed">
                     {facility.description}
                   </p>
                   
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                    <h4 className="text-yellow-300 font-semibold mb-4">Key Features:</h4>
+                  <div className="bg-neutral-light rounded-2xl p-6 shadow-inner">
+                    <h4 className="text-primary-blue font-semibold mb-4">Key Features:</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {facility.features.map((feature) => (
                         <div key={feature} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full" />
-                          <span className="text-gray-200">{feature}</span>
+                          <div className="w-2 h-2 bg-primary-blue rounded-full" />
+                          <span className="text-neutral-gray">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -213,7 +212,7 @@ export function Facilities() {
       </section>
 
       {/* Additional Facilities Grid */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -221,8 +220,8 @@ export function Facilities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Additional Amenities</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Additional Amenities</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Comprehensive support facilities for a complete educational experience
             </p>
           </motion.div>
@@ -235,14 +234,14 @@ export function Facilities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center group hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg text-center group hover:shadow-2xl transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-purple-400 to-pink-500 p-4 rounded-2xl mx-auto w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-primary-red to-secondary-red p-4 rounded-2xl mx-auto w-fit mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
                   <facility.icon className="h-8 w-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-yellow-300 mb-2">{facility.count}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{facility.title}</h3>
-                <p className="text-gray-200">{facility.description}</p>
+                <div className="text-3xl font-bold text-accent-gold mb-2">{facility.count}</div>
+                <h3 className="text-xl font-bold text-neutral-dark mb-3">{facility.title}</h3>
+                <p className="text-neutral-gray">{facility.description}</p>
               </motion.div>
             ))}
           </div>
@@ -250,7 +249,7 @@ export function Facilities() {
       </section>
 
       {/* Infrastructure Data Table */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -258,16 +257,16 @@ export function Facilities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Infrastructure Overview</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Infrastructure Overview</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Detailed breakdown of our campus facilities and capacity
             </p>
           </motion.div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-blue-600 to-purple-600">
+                <thead className="bg-gradient-to-r from-primary-blue to-secondary-blue">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-white">Facility</th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-white">Capacity/Details</th>
@@ -282,12 +281,12 @@ export function Facilities() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.03 }}
-                      className="border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                      className="border-b border-neutral-gray/20 hover:bg-neutral-light transition-colors duration-300"
                     >
-                      <td className="px-6 py-4 text-white font-medium">{item.facility}</td>
-                      <td className="px-6 py-4 text-gray-200">{item.capacity}</td>
+                      <td className="px-6 py-4 text-neutral-dark font-medium">{item.facility}</td>
+                      <td className="px-6 py-4 text-neutral-gray">{item.capacity}</td>
                       <td className="px-6 py-4">
-                        <span className="bg-yellow-400/20 text-yellow-300 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-accent-gold/20 text-accent-gold px-3 py-1 rounded-full text-sm font-medium">
                           {item.type}
                         </span>
                       </td>
@@ -301,7 +300,7 @@ export function Facilities() {
       </section>
 
       {/* Safety & Security Features */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-neutral-light/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -309,8 +308,8 @@ export function Facilities() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Safety & Security</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-dark mb-6">Safety & Security</h2>
+            <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
               Comprehensive security measures ensuring a safe learning environment
             </p>
           </motion.div>
@@ -344,13 +343,13 @@ export function Facilities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center group hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-6 shadow-lg text-center group hover:shadow-2xl transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-red-400 to-pink-500 p-3 rounded-xl mx-auto w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-primary-red to-secondary-red p-3 rounded-xl mx-auto w-fit mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-200 text-sm">{feature.description}</p>
+                <h3 className="text-lg font-bold text-neutral-dark mb-3">{feature.title}</h3>
+                <p className="text-neutral-gray text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -358,23 +357,23 @@ export function Facilities() {
       </section>
 
       {/* Virtual Tour CTA */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl p-12 text-blue-900"
+            className="bg-gradient-to-r from-primary-blue to-secondary-blue rounded-3xl p-12 text-white shadow-2xl"
           >
             <h2 className="text-4xl font-bold mb-6">Experience Our Campus</h2>
             <p className="text-xl mb-8 opacity-90">
               Schedule a visit to see our world-class facilities in person and meet our dedicated team
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-800 transition-colors duration-300">
+              <button className="bg-white text-primary-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-light transition-colors duration-300">
                 Schedule Campus Tour
               </button>
-              <button className="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-900 hover:text-white transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-blue transition-all duration-300">
                 Virtual Tour
               </button>
             </div>

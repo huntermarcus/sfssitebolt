@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import type { Engine } from "@tsparticles/engine";
 
 export function AnimatedBackground() {
   const [init, setInit] = useState(false);
@@ -14,10 +13,6 @@ export function AnimatedBackground() {
     });
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
-
   if (!init) {
     return null;
   }
@@ -28,7 +23,7 @@ export function AnimatedBackground() {
       options={{
         background: {
           color: {
-            value: "#ffffff",
+            value: "transparent",
           },
         },
         fpsLimit: 60,
@@ -49,26 +44,26 @@ export function AnimatedBackground() {
         },
         particles: {
           color: {
-            value: ["#B80000", "#00008B", "#FF5733", "#4169E1"],
+            value: ["#B80000", "#00008B", "#E53E3E", "#4299E1", "#FFD700"],
           },
           links: {
-            color: "#cccccc",
+            color: "#A0AEC0",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.2,
             width: 1,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: "none",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "out",
             },
-            random: false,
-            speed: 2,
+            random: true,
+            speed: 1,
             straight: false,
           },
           number: {
@@ -76,25 +71,16 @@ export function AnimatedBackground() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
-            value: 0.5,
+            value: 0.3,
           },
           shape: {
-            type: "char",
-            options: {
-              char: {
-                value: ["🎓", "📚", "🔬", "💡", "✏️"],
-                font: "Verdana",
-                style: "",
-                weight: "400",
-                fill: true
-              },
-            },
+            type: "circle",
           },
           size: {
-            value: { min: 16, max: 32 },
+            value: { min: 1, max: 3 },
           },
         },
         detectRetina: true,

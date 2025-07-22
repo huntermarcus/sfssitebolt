@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
@@ -17,7 +16,7 @@ import { CBSEDisclosure } from './pages/CBSEDisclosure';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-red-800 via-red-700 to-red-800 relative overflow-x-hidden">
+      <div className="min-h-screen bg-neutral-light relative overflow-x-hidden">
         <AnimatedBackground />
         <Navigation />
         <main className="relative z-10">

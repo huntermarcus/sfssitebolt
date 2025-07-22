@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { 
   FileText, 
   Download, 
@@ -7,12 +9,18 @@ import {
   School, 
   Users, 
   Building, 
-  Award,
-  CheckCircle
+  Award
 } from 'lucide-react';
 
 export function CBSEDisclosure() {
   const [activeTab, setActiveTab] = useState('general');
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   const tabs = [
     { id: 'general', label: 'General Information', icon: School },
